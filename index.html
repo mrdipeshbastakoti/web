@@ -55,10 +55,7 @@
     <section id="contact">
         <h2>Contact Me</h2>
         <p>Feel free to reach out through the form below!</p>
-        <form action="https://formsubmit.co/jrdipeshbastakoti@gmail.com"
-              method="POST"
-              enctype="multipart/form-data"
-              onsubmit="return validateForm()">
+        <form action="https://formsubmit.co/jrdipeshbastakoti@gmail.com" method="POST" onsubmit="return validateForm()">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
@@ -67,10 +64,6 @@
 
             <label for="message">Message:</label>
             <textarea id="message" name="message" required></textarea>
-
-            <label for="attachment">Attach a file (optional):</label>
-            <input type="file" id="attachment" name="attachment"
-                   accept=".png,.jpg,.jpeg,.pdf,.doc,.docx">
 
             <button type="submit">Send Message</button>
         </form>
@@ -83,7 +76,7 @@
             <a href="https://www.facebook.com/profile.php?id=100025422935667" target="_blank">
                 <img src="facebook-logo.png" alt="Facebook" width="30">
             </a>
-            <a href="https://www.instagram.com/dipesh_bastakoti/profilecard/?igsh=MWc5cjJvOGlzaGIyMA%3D%3D&fbclid=IwY2xjawGUD5tleHRuA2FlbQIxMAABHYCNZ6UAemobC5IBOvUz6991-ut95CxYrGk46wF-cq94NUaum_8t7togfQ_aem_4heWp0BO-ZnWs3mRw7_WQw" target="_blank">
+            <a href="https://www.instagram.com/dipeshbastakoti?igsh=dWowNW1raTJnbTA0&utm_source=qr" target="_blank">
                 <img src="instagram-logo.png" alt="Instagram" width="30">
             </a>
             <a href="https://github.com/mrdipeshbastakoti" target="_blank">
@@ -94,32 +87,8 @@
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Dipesh Bastakoti. All rights reserved.</p>
+        <p>&copy; 2025 Dipesh Bastakoti. All rights reserved.</p>
     </footer>
-
-    <!-- Validation Script -->
-    <script>
-        function validateForm() {
-            const fileInput = document.getElementById('attachment');
-            if (!fileInput || !fileInput.files || fileInput.files.length === 0) return true;
-
-            const file = fileInput.files[0];
-            const maxSize = 5 * 1024 * 1024; // 5 MB
-            const allowed = ['image/png','image/jpeg','application/pdf',
-                             'application/msword',
-                             'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
-
-            if (file.size > maxSize) {
-                alert('The file is too large. Maximum allowed size is 5 MB.');
-                return false;
-            }
-            if (!allowed.includes(file.type)) {
-                alert('File type not allowed. Please upload PNG/JPG/PDF/DOC/DOCX files only.');
-                return false;
-            }
-            return true;
-        }
-    </script>
 
     <script src="script.js"></script>
 </body>
